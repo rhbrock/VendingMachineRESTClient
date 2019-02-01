@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Vending Machine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap core CSS-->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <style>
+            div {
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+            }
+            hr {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                border: 0;
+                border-top: 3px solid rgba(0, 0, 0, 1);
+            }
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input{
+                text-align: center;
+            }
+            .sq{
+                border: 5px solid black;
+            }
+            a:hover{
+                background-color: red;
+            }
+           
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class ="row">
+                <div class ="col-md-12">
+                    <h1 class="text-center">Vending Machine</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>1</p>
+                                <div id="1"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>2</p>
+                                <div id="2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>3</p>
+                                <div id="3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>4</p>
+                                <div id="4"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>5</p>
+                                <div id="5"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>6</p>
+                                <div id="6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>7</p>
+                                <div id="7"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>8</p>
+                                <div id="8"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sq">
+                                <p>9</p>
+                                <div id="9"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <form role="form" id="vendingForms" class="text-center">
+                        <div class="form-group">
+                            <h2 >Total $ In</h2>
+                            <input type ="number" class="form-control" id="moneyIn" align='center' step='any' disabled>
+                            <div class="btn-group">
+                            <div class="form-group-row">
+                                <button type="button" class="btn btn-outline-primary" id="dollar" onclick="addDollar()">Add Dollar</button>
+                                <button type="button" class="btn btn-outline-primary" id="quarter" onclick="addQuarter()">Add Quarter</button>
+                            </div>
+                            <div class="form-group-row">
+                                <button type="button" class="btn btn-outline-primary" id="nickel" onclick="addNickel()">Add Nickel</button>
+                                <button type="button" class="btn btn-outline-primary" id="dime" onclick="addDime()">Add Dime</button>
+                            </div> 
+                            </div>
+                        </div>  
+
+                        <div class="form-group">
+                            <h2 >Messages</h2>
+                            <input type ="text" class="form-control" id="message" disabled>
+                            <div class="form-group row">
+                                <label for="item" class="col-sm-2 col-form-label col-form-label-lg">Item:</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="col-sm-10 form-control form-control-lg" id="item" disabled>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary" id="makePurchase" onclick="purchase()">Make Purchase</button>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <h2>Change</h2>
+                            <input type ="text" class="form-control" id="change" disabled>
+                            <div>
+                            <button type="button" class="btn btn-outline-primary" id="returnChange" onclick="changeReturn()">Change Return</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
